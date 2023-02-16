@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+a=$RANDOM
+b=$RANDOM
+a_sqrt=$(echo "$a" | awk '{print sqrt($1)}')
+b_sqrt=$(echo "$b" | awk '{print sqrt($1)}')
+total=`echo $a_sqrt + $b_sqrt | bc`
+echo "The first random number generated is $a"
+echo "The square root is $a_sqrt"
+echo "The second random number generated is $b"
+echo "The square root is $b_sqrt"
+echo "The sum of their square roots is $total"
